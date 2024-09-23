@@ -1,0 +1,16 @@
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.deleteBtn{
+    background: transparent;
+    border: none;
+    cursor: pointer; /*Making a handshaped pointer*/
+    font-size: 20px;
+    margin-left:10px;
+}
+
+.deleteBtn:hover{
+    color:red;
+}

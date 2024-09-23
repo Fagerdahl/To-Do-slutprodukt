@@ -1,2 +1,43 @@
 # To-Do-slutprodukt
 Slutprodukt av allt lärande, den sista nystarten med to-do listan.
+
+MIN PROCESS:
+Jag skapade först ett repository på gitHub. Sedan clonade jag in den i arbetsmappen genom git bash. Jag har gjort en to-do list i ett annat repo, men jag vill göra om allt helt från scratch för att få en djupare förståelse av vad det är jag gör.
+Jag kommer att förklara och kommentera mycket, då det är enda sättet för mig att begripa vad det är jag gör med min kod. 
+Jag startade med själva "benstrukturen" i html, sedan såg jag över vilka variabler jag behöver i js. 
+
+
+## BETYGSKRITERIER här för enkel åtkomst
+Skapa en webbapplikation för ToDo som innehåller HTML, CSS och JavaScript.
+
+Skriva in en uppgift i ett <input>-fält
+Klicka på en knapp för att lägga till uppgiften i en lista som en <li>
+Om man klickar på knappen när fältet är tomt ska man få ett meddelande som säger att man måste skriva något.
+
+Klicka på en uppgift <li> i listan för att markera den som klar (sätta class så att den stylas annorlunda)
+Uppdatera en liten etikett någonstans med antal uppgifter som man gjort klart.
+
+Uppgifterna som syns i HTML ska även lagras/hanteras i en array med objekt i JavaScript.
+
+Uppgiften ska redovisas som en länk till ett repo på GitHub.
+
+För G ska samtliga ovan punkter uppfyllas med en fungerande webbapplikation.
+
+För VG ska förutom G-kraven följande uppfyllas:
+Klicka på en <li> som markerats som färdig igen för att markera den som ofärdig (kräver conditionals)
+Klicka på en liten papperskorg på varje rad för att radera den uppgiften ur listan
+
+Webbapplikationen ska publiceras på GitHub pages.
+
+HJÄLP:
+
+Just det, jag glömde säga att du kan börja med att hardkoda en uppgift för att testa i din kod /funktion. Till exempel, skapa en uppgift som const task1 = { id: 1, text: 'do something', completed: false };, och försök sedan spara den i arrayen. Använd console.log för att skriva ut arrayen och se om problemet ligger i funktionen eller om det är ett problem med kopplingen mellan DOM och JavaScript
+
+Mina tips för att göra det lättare för dig är att börja med att skapa en array och ett objekt för varje ny uppgift. Dela sedan upp logiken i små funktioner, som till exempel add, delete och toggle, så blir det enklare att testa och justera koden. Ta först en funktion, till exempel add, och fundera på vad som behövs för att lägga till en ny uppgift och spara den i arrayen. Lägg hela fokusen på att den funktionen fungerar till 100% innan du går vidare till nästa. Hemligheten bakom att skriva bra kod  är att bryta ner allt i små delar och använda console.log ofta i början för att se till att allt fungerar innan man går vidare.
+
+Variabler: Behållare för data.
+Funktioner: Block av kod som kan köras när som helst.
+Loopar och villkor: Hur man upprepar och beslutar saker i koden.
+DOM-manipulation: Hur du interagerar med element på en webbsida.
+
+

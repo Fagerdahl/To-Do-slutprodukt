@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    
+   
+</head>
+<body class="container"><!--I put body in a class for later styling-->
+
+    <h1>Ronjas To-do List</h1>
+
+    <div class="main">
+        <input type="text" id="textInput" placeholder="New Task...">
+        <button id="addBtn">Add Task to List</button>
+        <h3>TASKS</h3>
+    </div>
+        
+    <div class="theList">
+    
+        <ul id="theList"></ul>
+    
+    </div>
+    
+
+    <div class="countingTasks">
+        <p>Tasks completed: <span id="completedCount">0</span></p>
+        <p>Tasks yet to be done: <Span id="pendingCount">0</Span></p>
+        <p>TOTAL TASKS IN LIST: <span id="totalTasks">0</span></p>
+    </div>
+
+    <button id="clearBtn">Clear List</button>
+
+<script src='script.js'></script>
+
+</body>
+</html>
