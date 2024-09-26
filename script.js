@@ -4,15 +4,9 @@ let taskArray=[]; //Array declared for my List, so that it can be stored.
 const completedCount= document.querySelector("#completedCount");
 const pendingCount= document.querySelector("#pendingCount"); 
 const totalTasks= document.querySelector("#totalTasks");
-
 const taskList=document.querySelector("#theList");
+
 let inputValue=document.querySelector("#textInput");
-
-/* Functions that will be required:
-# Add task (Btn)
-# Clear all tasks (Btn)
-# Update Counters*/
-
 
 function addTask(){
 

@@ -48,6 +48,7 @@ Däremot gjorde jag en delete button, men överstrykningen sträckte sig hela v�
 Clear all-knappen blev alldeles för lång, fast den var kort någonstans under processen. 
 Jag lyckades heller inte behålla punkterna på min o-ordnade lista, de försvann under vägens gång och jag vet inte hur.
 
+Jag läste i mina anteckningar att vi ska ange constants med STORA BOKSTÄVER, stämmer det?
 
 
 
