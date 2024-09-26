@@ -1,16 +1,65 @@
+
+
+html{
+    height: 100 vh;
+    min-width: 600px;
+    background-image:linear-gradient(90deg, #FFFF, rgb(39, 17, 204) );
+    background-repeat: repeat;
+    background-size:cover
+}
+
+
 .completed{
     text-decoration: line-through;
     color: gray;
+
 }
 
-.deleteBtn{
-    background: transparent;
-    border: none;
-    cursor: pointer; /*Making a handshaped pointer*/
-    font-size: 20px;
-    margin-left:10px;
+.theList{
+    font-size:x-large;
+    font-style: italic;
+
+
+}
+.container{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    font-family: "Regular",
+
 }
 
-.deleteBtn:hover{
-    color:red;
+#addBtn{
+    background-color: green;
+
 }
+
+#clearBtn{
+    background-color: rgb(117, 103, 225)
+}
+.delete-btn{
+    color:rgb(241, 100, 128);
+
+}
+
+.everySpecificTask{
+    display: flex;
+    justify-content: space-between;
+    padding: 10 px;
+    border-bottom: 1px;}
+
+.completedCount{
+    color:green;
+    font-size: larger;
+}
+    
+#exception{
+    color: red;
+    font-size: large;
+}
+
+
+
+
