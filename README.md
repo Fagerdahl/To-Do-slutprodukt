@@ -51,7 +51,7 @@ Jag lyckades heller inte behålla punkterna på min o-ordnade lista, de försvan
 Jag läste i mina anteckningar att vi ska ange constants med STORA BOKSTÄVER, stämmer det?
 
 
-
+Jag lägger till lite mer text för att stagea nya förändringar, som jag kan committa och få en ny version att pusha till github. 
 
 
 
