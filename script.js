@@ -14,7 +14,7 @@ function addTask(){
        
        const taskText=inputValue.value.trim();//If input is done with unneccesary tabs, the trim-method TRIMS the string.
        console.log("input value: ", taskText);
-
+       
        const exception=document.querySelector("#exception");//pulling out the error message
 
         if (taskText===""){
@@ -28,6 +28,7 @@ function addTask(){
         
         const li= document.createElement("li"); //Creating a li-element for the task
         li.classList.add("everySpecificTask"); //Making it a class for later styling
+        li.style.backgroundColor=getNextColor();
         li.textContent=taskText;//Placing both on the same place
 
         const deleteBtn=document.createElement("button");
@@ -68,9 +69,17 @@ function addTask(){
 function clearAll(){
 clearBtn.addEventListener("click", function (){
     
-    taskArray=[];
-    taskList.innerHTML="";
-    updateCounters();
+    const confirmChoise=confirm("Do you want to delete everything?");
+    if (confirmChoise){
+        taskArray=[];
+        taskList.innerHTML="";
+        updateCounters();
+        console.log("All tasks deleted");
+    } else{
+        console.log("Deletion process cancelled");
+    }
+
+    
 });    
 
 }
@@ -89,9 +98,19 @@ function updateCounters(){
     console.log(`completed: ${completedTasks}, pending: ${pendingTasks}, Total: ${totalTasksInList}`);
 
 
+}
+//an array for colors to rotate
+const colors=['']
+let colorIndex=0;
 
+function getNextColor(){
+    const color=colors[colorIndex];
+    colorIndex=(colorIndex+1) % colors.length;
+    return color;
+    
 }
 
 updateCounters();
 addTask();
 clearAll();
+

@@ -6,17 +6,21 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/11/Focus-photography-widescreen-wallpapers-1920x1080.jpg"alt="ronjasPhoto">
     
    
 </head>
 <body class="container"><!--I put body in a class for later styling-->
 
-    <h1>Ronjas To-do List</h1>
+
+    <div class="ronjasPhoto">
+        <h1>Ronjas Bucketlist</h1>
+    </div>
 
     <div class="main">
         <input type="text" id="textInput" placeholder="New Task...">
-        <p id="exception", style="color:red; display:none;">you must write something</p><!--I style this one here so it stays hidden-->
-        <button id="addBtn">Add Task to List</button>
+        <p id="exception", style="color:rgb(151, 57, 57);background-color: #e78181; display:none; margin-right: 60%; border-radius: 2px;">you must write something!</p><!--I style this one here so it stays hidden-->
+        <button id="addBtn">Add a wish to your bucket..</button>
         <h3>TASKS</h3>
     </div>
     
@@ -26,9 +30,9 @@
 
     <div class="countingTasks">
         <!--These counters are placed inside a class and put in a span, so that they are styleable-->
-        <p>Tasks completed: <span id="completedCount" class="completedCount">0</span></p>
-        <p>Tasks yet to be done: <Span id="pendingCount">0</Span></p>
-        <p>TOTAL TASKS IN LIST: <span id="totalTasks">0</span></p>
+        <p>DREAMS REALIZED: <span id="completedCount" class="completedCount">0</span></p>
+        <p>Dreams Left: <Span id="pendingCount">0</Span></p>
+        <p>TOTAL ideas in LIST: <span id="totalTasks">0</span></p>
     </div>
 
     <button id="clearBtn">Clear List</button>

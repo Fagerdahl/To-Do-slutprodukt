@@ -1,28 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+h1 {
+    font-family: "Qwitcher Grypen", cursive;
+ 
+  }
 
 
 html{
-    height: 100 vh;
+    height: 100vh;
     min-width: 600px;
-    background-image:linear-gradient(90deg, #FFFF, rgb(39, 17, 204) );
+    background-image:linear-gradient(90deg, #3f86cd, rgb(192, 197, 214) );
     background-repeat: repeat;
     background-size:cover
+    
 }
-
-
 .completed{
     text-decoration: line-through;
-    color: gray;
+    
+    color: rgb(99, 96, 107);
 
 }
-
 .theList{
     font-size:x-large;
-    font-style: italic;
+    align-items:center;
+    background:linear-gradient(300deg, rgb(236, 190, 105),white);
+    padding: -20px;
+     
+    text-decoration-line:underline;
+    text-decoration-thickness:1px;
+    
+}
+.everySpecificTask{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius:20px;
+    box-shadow:inset;
+    transition: transform 0.3 ease, background-color 0.3s ease;
+
+}
+.everySpecificTask:hover {
+    transform: scale(1.07);
+    background-color:rgb(237, 183, 103);
 
 
 }
+
 .container{
-    width: 500px;
+    width: 600px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -30,36 +56,90 @@ html{
     font-family: "Regular",
 
 }
-
 #addBtn{
-    background-color: green;
-
+    background-color: rgb(190, 196, 239);
+    font-size:medium;
+    font-style: italic;
+    border-radius: 12px;
+    padding: 8px 8px;
+    margin-left: 20px;
+    font-size: smaller;
+    cursor:pointer;
+    box-shadow: 0 4px 8px purple(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2 ease;
+}
+#addBtn:hover{   
+    background-color: rgb(93, 117, 224);
+    transform:scale(1.09);
+}
+ 
+#addBtn:focus{
+    box-shadow:(0, 0, 0, 2px rgba(241, 100, 128, 0.5));
 }
 
 #clearBtn{
-    background-color: rgb(117, 103, 225)
+    background-color: rgb(149, 136, 248);
+    font-size: small;
+    width: 100px;
+    
 }
 .delete-btn{
     color:rgb(241, 100, 128);
-
+    font-size:x-small;
+    margin-left:auto;
+    margin-right:20px;
+    border:none;
+    border-radius: 12px;
+    padding: 8px 8px;
+    font-size: small;
+    cursor:pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2 ease;
+    
+} .delete-btn:hover{
+    background-color: rgb(255,80,90);
+    transform:scale(1.05);
 }
-
-.everySpecificTask{
-    display: flex;
-    justify-content: space-between;
-    padding: 10 px;
-    border-bottom: 1px;}
-
+.delete-btn:focus{
+    box-shadow:(0, 0, 0, 2px rgba(241, 100, 128, 0.5));
+}
 .completedCount{
-    color:green;
-    font-size: larger;
+    color:rgb(128, 0, 68);
 }
     
 #exception{
-    color: red;
+    color: rgb(212, 124, 124);
     font-size: large;
+    
 }
+.ronjasPhoto{
 
+    position: relative;
+    width: 50px;
+    height: 70px;
+    background-image: url(img/ronjasPhoto.jpg);
+
+
+}
+.ronjasPhoto h1{
+    font-family: "Qwitcher Grypen", cursive;
+    position: absolute;
+    top: -450%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrera texten både horisontellt och vertikalt */
+    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    letter-spacing: 5px;
+
+    
+}
+.main{
+    position: relative;
+    top: -20px;
+    
+}
 
 
 
