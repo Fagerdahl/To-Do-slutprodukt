@@ -6,36 +6,33 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/11/Focus-photography-widescreen-wallpapers-1920x1080.jpg"alt="ronjasPhoto">
-    
+    <!--img src="https://www.pixelstalk.net/wp-content/uploads/2016/11/Focus-photography-widescreen-wallpapers-1920x1080.jpg"alt="ronjasPhoto" class="styleOne"-->
    
 </head>
+
 <body class="container"><!--I put body in a class for later styling-->
+    <div class="contentBox">
+<a onclick="document.querySelector('link').href= 'style.css'">vers.1</a>    
+<a onclick="document.querySelector('link').href= 'style2.css'">Klicka här för att komma till inlämningsuppgiften</a>
 
-
-    <div class="ronjasPhoto">
-        <h1>Ronjas Bucketlist</h1>
+<strong>My ToDo</strong>
+    <div class="completedTasks">
+        <!--These counters are placed inside a class and put in a span, so that they are styleable-->
+            <span id="completedCount">0</span>&nbsp;completed <!--I am using a non breaking space in HTML, since I don`t know how to make space in CSS-->
+        <!--<p>Goals Left: <Span id="pendingCount">0</Span></p>
+        <p>TOTAL Goals in bucketlist: <span id="totalTasks">0</span></p>-->
     </div>
 
     <div class="main">
-        <input type="text" id="textInput" placeholder="New Task...">
-        <p id="exception", style="color:rgb(151, 57, 57);background-color: #e78181; display:none; margin-right: 60%; border-radius: 2px;">you must write something!</p><!--I style this one here so it stays hidden-->
-        <button id="addBtn">Add a wish to your bucket..</button>
-        <h3>TASKS</h3>
+        <input type="text" id="textInput" placeholder=" ">
+        <p id="exception", style="color:rgb(250, 21, 21);background-color: #e78181; display:none; margin-right: 60%; border-radius: 2px;">Input must not be empty</p><!--I style this one here so it stays hidden-->
+        <button id="addBtn">OK</button>
+       
     </div>
-    
-    <div class="theList">
-        <ul id="theList"></ul><!--Unordered-->
+        <div class="theList">
+            <ul id="theList"></ul>
+        </div>
     </div>
-
-    <div class="countingTasks">
-        <!--These counters are placed inside a class and put in a span, so that they are styleable-->
-        <p>DREAMS REALIZED: <span id="completedCount" class="completedCount">0</span></p>
-        <p>Dreams Left: <Span id="pendingCount">0</Span></p>
-        <p>TOTAL ideas in LIST: <span id="totalTasks">0</span></p>
-    </div>
-
-    <button id="clearBtn">Clear List</button>
 
 <script src='script.js'></script>
 

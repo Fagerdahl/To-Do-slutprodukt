@@ -5,34 +5,31 @@ const completedCount= document.querySelector("#completedCount");
 const pendingCount= document.querySelector("#pendingCount"); 
 const totalTasks= document.querySelector("#totalTasks");
 const taskList=document.querySelector("#theList");
+let completedTasksCount=0;
+
 
 let inputValue=document.querySelector("#textInput");
 
 function addTask(){
-
     addBtn.addEventListener("click", function(){
-       
-       const taskText=inputValue.value.trim();//If input is done with unneccesary tabs, the trim-method TRIMS the string.
-       console.log("input value: ", taskText);
-       
-       const exception=document.querySelector("#exception");//pulling out the error message
+    const taskText=inputValue.value.trim();//If input is done with unneccesary tabs, the trim-method TRIMS the string.
+    const exception=document.querySelector("#exception");//pulling out the error message
 
         if (taskText===""){
-            
             exception.style.display="block"; //A block with an error message
             return; //Getting out of the function
-            } else{
-                exception.style.display="none"; //Clearing the error message 
+            
+        } else{
+            exception.style.display="none"; //Clearing the error message 
             }
 
         
         const li= document.createElement("li"); //Creating a li-element for the task
         li.classList.add("everySpecificTask"); //Making it a class for later styling
-        li.style.backgroundColor=getNextColor();
         li.textContent=taskText;//Placing both on the same place
 
         const deleteBtn=document.createElement("button");
-        deleteBtn.textContent= "X" ; //Tried a trashbin, but It`s just an ordinary string
+        deleteBtn.textContent="🗑️";
         deleteBtn.classList.add("delete-btn");//adding a class for styling
 
 
@@ -53,7 +50,12 @@ function addTask(){
         //Adding a listener to this function and CSS styling to make it work
         li.addEventListener("click", function(){
             li.classList.toggle("completed") //Toggle makes it possible to switch between two different conditions. The listener gets the click and the "toggle" happens. 
+            const taskIndex=taskArray.findIndex(task=>task.text===taskText);
+            if (taskIndex!==-1){
+                taskArray[taskIndex].completed=!taskArray[taskIndex].completed;
+            }
             updateCounters();
+
         });
 
         taskArray.push({text:taskText, completed: false}); //Pushing the Tasks to my Array
@@ -74,41 +76,32 @@ clearBtn.addEventListener("click", function (){
         taskArray=[];
         taskList.innerHTML="";
         updateCounters();
-        console.log("All tasks deleted");
-    } else{
-        console.log("Deletion process cancelled");
     }
-
     
 });    
 
 }
 
 function updateCounters(){
-
-    const completedTasks= document.querySelectorAll(".completed").length;//Counting ALL
+   
+    completedTasksCount= taskArray.filter(task=>task.completed).length;//All completed tasks
     const totalTasksInList=taskArray.length;// The whole array with all the tasks
-    const pendingTasks=totalTasksInList-completedTasks;//Total tasks - Completed tasks = Pending tasks
+   
 
-    completedCount.textContent=completedTasks;
-    pendingCount.textContent=pendingTasks;
-    totalTasks.textContent=totalTasksInList;
-
+    completedCount.textContent=completedTasksCount;
+    /*pendingCount.textContent=pendingTasks;
+    totalTasks.textContent=totalTasksInList;*/
     //Instead of adding strings and variables to a "long string", I Choose to work with Tempelate Literals with `bakfnuttar`
-    console.log(`completed: ${completedTasks}, pending: ${pendingTasks}, Total: ${totalTasksInList}`);
+    console.log(`completed: ${completedTasksCount}, Total: ${totalTasksInList}`);
 
 
 }
-//an array for colors to rotate
-const colors=['']
-let colorIndex=0;
 
-function getNextColor(){
-    const color=colors[colorIndex];
-    colorIndex=(colorIndex+1) % colors.length;
-    return color;
-    
+function completedTasks(){
+    completedTasks++;
+    document.querySelector('.completedCount').textContent=completedTasks;
 }
+
 
 updateCounters();
 addTask();
