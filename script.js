@@ -13,8 +13,7 @@ let inputValue=document.querySelector("#textInput");
 function addTask(){
     addBtn.addEventListener("click", function(){
     const taskText=inputValue.value.trim();//If input is done with unneccesary tabs, the trim-method TRIMS the string.
-    const exception=document.querySelector("#exception");//pulling out the error message
-
+        
         if (taskText===""){
             exception.style.display="block"; //A block with an error message
             return; //Getting out of the function
@@ -31,6 +30,7 @@ function addTask(){
         const deleteBtn=document.createElement("button");
         deleteBtn.textContent="🗑️";
         deleteBtn.classList.add("delete-btn");//adding a class for styling
+        console.log('button to delete pressed')
 
 
         deleteBtn.addEventListener("click", function(){
@@ -43,9 +43,15 @@ function addTask(){
 
             updateCounters();
             
-        });
+ });
 
         li.appendChild(deleteBtn);//Deletebutton for every specific Task
+        taskList.appendChild(li);
+
+        const taskCount = taskList.children.length;
+        li.style.marginLeft=`${taskCount * 20}px` //Increasing margin left and right for every new task
+        li.style.marginRight=`${taskCount * 20}px` 
+        taskArray.push({text:taskText,completed:false});
 
         //Adding a listener to this function and CSS styling to make it work
         li.addEventListener("click", function(){
