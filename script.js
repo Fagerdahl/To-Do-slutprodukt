@@ -5,6 +5,8 @@ const completedCount= document.querySelector("#completedCount");
 const pendingCount= document.querySelector("#pendingCount"); 
 const totalTasks= document.querySelector("#totalTasks");
 const taskList=document.querySelector("#theList");
+const alertText=document.querySelector("#alert");
+
 let completedTasksCount=0;
 
 
@@ -15,17 +17,22 @@ function addTask(){
     const taskText=inputValue.value.trim();//If input is done with unneccesary tabs, the trim-method TRIMS the string.
         
         if (taskText===""){
-            exception.style.display="block"; //A block with an error message
-            return; //Getting out of the function
+            alertText.textContent="This must not be empty";
+            alertText.style.display="block";//warning shows
+            return;
             
         } else{
-            exception.style.display="none"; //Clearing the error message 
-            }
+            alertText.style.display="none"; //Clearing the error message 
+        }
 
         
         const li= document.createElement("li"); //Creating a li-element for the task
         li.classList.add("everySpecificTask"); //Making it a class for later styling
-        li.textContent=taskText;//Placing both on the same place
+      
+        const taskTextSpan=document.createElement("span");
+        taskTextSpan.textContent=taskText;
+        taskTextSpan.classList.add("task-text"); //Adding a class
+        li.appendChild(taskTextSpan);//Appending a child to the list. 
 
         const deleteBtn=document.createElement("button");
         deleteBtn.textContent="🗑️";
@@ -70,21 +77,7 @@ function addTask(){
         inputValue.value=""; //Emptying the input
         updateCounters(); 
         
-    });
-
-}
-
-function clearAll(){
-clearBtn.addEventListener("click", function (){
-    
-    const confirmChoise=confirm("Do you want to delete everything?");
-    if (confirmChoise){
-        taskArray=[];
-        taskList.innerHTML="";
-        updateCounters();
-    }
-    
-});    
+    });   
 
 }
 
@@ -111,5 +104,5 @@ function completedTasks(){
 
 updateCounters();
 addTask();
-clearAll();
+
 
