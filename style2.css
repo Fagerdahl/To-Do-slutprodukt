@@ -6,6 +6,17 @@ html{font-size: 100%;
     background-image:linear-gradient(360deg, salmon, pink );
 
 }
+
+#textInput{
+    outline-color: rgb(224, 248, 16);
+    border-radius: 3px;
+}
+#textInput:focus{
+    outline-width: 0.5px;
+    outline-color:rgb(57, 160, 228);
+    border-radius: 3px;
+
+}
 .everySpecificTask{
     opacity: 0;
     animation: fadeInUp 0.4s ease-out forwards;
@@ -13,6 +24,7 @@ html{font-size: 100%;
     justify-content: center;
     font-family: 'Open Sans', sans-serif;
     font-weight:600;
+    padding-bottom: 5px;
 }
 @keyframes fadeInUp{
     0%{
@@ -25,11 +37,11 @@ html{font-size: 100%;
     }
 }
 .container{
-    box-sizing: border-box;
-    font-size: x-large;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ margin-top: 5px;
+ justify-content: center;
+ margin-left: 480px;
+ margin-right: 480px;
+ 
 }
 
 strong{
@@ -72,7 +84,7 @@ strong{
     background-color: rgb(255, 255, 255);
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .delete-btn{
@@ -92,13 +104,23 @@ strong{
 #theList li span{
     padding-right: 10px;
 }
-p#alert{
-    
+#alert{
+    display: none;
     font-size: medium;
     font-style: italic;
     font-weight: 200;
-    color:red;
-    margin-top: 80px;
-    padding-left: 19px;
-    
+    color:red;  
+    animation: blink 2s;
+    margin-top: 5px;
+    margin-bottom: 10px;
+   
+}
+@keyframes blink{
+    0%, 100% { opacity: 1}
+    50% {opacity:0;}
+    100% {opacity:1;}
+}
+.blink{
+    display: block;
+    animation: blink 1s ease-in-out;
 }

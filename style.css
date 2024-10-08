@@ -1,6 +1,5 @@
 h1 {
     font-family: "Qwitcher Grypen", cursive;
- 
   }
 
 
@@ -40,17 +39,6 @@ html{
 .everySpecificTask:hover {
     transform: scale(1.07);
     background-color:rgb(237, 183, 103);
-
-
-}
-
-.container{
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    font-family: "Regular",
 
 }
 #addBtn{

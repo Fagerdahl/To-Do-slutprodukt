@@ -6,10 +6,9 @@ const pendingCount= document.querySelector("#pendingCount");
 const totalTasks= document.querySelector("#totalTasks");
 const taskList=document.querySelector("#theList");
 const alertText=document.querySelector("#alert");
+const addBtn=document.querySelector("#addBtn");
 
 let completedTasksCount=0;
-
-
 let inputValue=document.querySelector("#textInput");
 
 function addTask(){
@@ -17,12 +16,13 @@ function addTask(){
     const taskText=inputValue.value.trim();//If input is done with unneccesary tabs, the trim-method TRIMS the string.
         
         if (taskText===""){
-            alertText.textContent="This must not be empty";
-            alertText.style.display="block";//warning shows
+            alertText.classList.add("blink");
+            alertText.style.display="block";
             return;
             
         } else{
-            alertText.style.display="none"; //Clearing the error message 
+            alertText.classList.remove("blink"); //Clearing the error message 
+            alertText.style.display="none";
         }
 
         
@@ -33,7 +33,7 @@ function addTask(){
         taskTextSpan.textContent=taskText;
         taskTextSpan.classList.add("task-text"); //Adding a class
         li.appendChild(taskTextSpan);//Appending a child to the list. 
-
+        
         const deleteBtn=document.createElement("button");
         deleteBtn.textContent="🗑️";
         deleteBtn.classList.add("delete-btn");//adding a class for styling
@@ -58,7 +58,7 @@ function addTask(){
         const taskCount = taskList.children.length;
         li.style.marginLeft=`${taskCount * 20}px` //Increasing margin left and right for every new task
         li.style.marginRight=`${taskCount * 20}px` 
-        taskArray.push({text:taskText,completed:false});
+        taskArray.push({text:taskText,completed:false}); //Pushing the Tasks to my Array
 
         //Adding a listener to this function and CSS styling to make it work
         li.addEventListener("click", function(){
@@ -70,8 +70,6 @@ function addTask(){
             updateCounters();
 
         });
-
-        taskArray.push({text:taskText, completed: false}); //Pushing the Tasks to my Array
         
         taskList.appendChild(li); //Putting the Task to the list
         inputValue.value=""; //Emptying the input
