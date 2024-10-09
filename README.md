@@ -61,9 +61,7 @@ Du kan sätta texten i en span och targetta så att bara din span får klassen c
 ##### Uppgift A2 ToDo med CSS
 Inlämningsuppgift 1 fil(er)
 Uppgiften är att via GitHub lämna in en version av ToDo-listan som påbörjades i förra kursen, men med utseende och animationer enligt den bifogade videofilen.
-
 Kravspecifikation
-
 Todo-appen ska ha styling som motsvarar det som visas i den bifogade videon, avseende färger, mått, typografi, etc.
 När man kommer in på sidan ska hela sidan animeras enligt videofilen: 
 flyga ner uppifrån och fade in
@@ -80,5 +78,14 @@ Lämna in genom att pusha till ett publikt repository på GitHub. Publicera ocks
 
 Länk till GitHub-repot
 Länk till GitHub Pages
+
+
+
+###### KOMMENTARER Uppgift A2 ToDo med CSS
+*Saker jag noterat: Har ej varit consistent med '' och "". När anv man vad?
+*strong istället för h1 och h2 var dåligt, men det funkade.
+*När jag skulle göra 2 olika stylingar och dölja länken till dem i displayen, så blev det rörigt på slutet. Jag kunde inte få bort css styling nr.1, som också blev helt förstörd under processens gång.
+*jag rörde ihop contentbox och container en del.
+*behöver öva mer på semantiken och hur jag lägger upp allt snyggt.
 
 
