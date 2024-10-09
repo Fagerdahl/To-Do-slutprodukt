@@ -87,5 +87,6 @@ Länk till GitHub Pages
 *När jag skulle göra 2 olika stylingar och dölja länken till dem i displayen, så blev det rörigt på slutet. Jag kunde inte få bort css styling nr.1, som också blev helt förstörd under processens gång.
 *jag rörde ihop contentbox och container en del.
 *behöver öva mer på semantiken och hur jag lägger upp allt snyggt.
+*Jag stylade 2 saker utanför CSS, men nu vill jag ha feedback så jag skickar in detta! Kul och utmanande. 
 
 
