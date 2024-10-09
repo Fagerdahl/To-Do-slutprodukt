@@ -7,13 +7,27 @@ html{font-size: 100%;
 
 }
 
+.task-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 #textInput{
-    outline-color: rgb(224, 248, 16);
-    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+
+    border-color: rgb(175, 175, 175);
+    border-width: 2px;
+    font-size: x-large;
+    width: 280px;
+    height: 35px;
+
 }
 #textInput:focus{
     outline-width: 0.5px;
-    outline-color:rgb(57, 160, 228);
+    outline-color:rgb(8, 125, 203);
     border-radius: 3px;
 
 }
@@ -37,60 +51,73 @@ html{font-size: 100%;
     }
 }
 .container{
- margin-top: 5px;
- justify-content: center;
- margin-left: 480px;
- margin-right: 480px;
- 
-}
-
-strong{
-    font-size: xxx-large;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height:100%;
+    margin:0 auto;
+    padding: 20px;
+    width: 600px;
+    max-width: 100%;
 }
 
-#addBtn{
-    font-size: small;
-    margin-left: 3px;
-    outline-style:auto;
-    outline-color: rgb(155, 155, 155);
+@media(max-width:600px){
+    .container{
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@keyframes dropIn{
     
 }
 
-.main{
-    margin-top: 20px;
-    font-size: xx-large;
-    display: flex;
+strong{
+    font-size: 4rem;
+    display:flex;
     justify-content: center;
     align-items: center;
     height:100%;
+    width: 100%;
+    text-align: center;
+}
 
-     
+#addBtn{
+    font-size: x-large;
+    width: 50px;
+    height: 40px;
+    outline-style:auto;
+    border-radius: 4px;
+    outline-color: rgb(155, 155, 155);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:500;
+
+
 }
 .completedTasks{
-    font-size: small;
-    font-family: 'Sans Open', sans-serif;
-    font-weight:bolder;
-    margin-top: 10px;
+    font-size: medium;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
     display:flex;
     justify-content:center;
     align-items: center;
     height:100%;  
 }
 .contentBox{
+    max-width: 100%;
+    min-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+    padding-bottom: 70px;
     background-color: rgb(255, 255, 255);
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .delete-btn{
     text-decoration-color: transparent;
     background-color: transparent;
     border: none;
+    font-size: large;
     
 }
 .delete-btn:hover{
@@ -103,24 +130,27 @@ strong{
 }
 #theList li span{
     padding-right: 10px;
+    font-size: x-large;
 }
 #alert{
     display: none;
-    font-size: medium;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:medium;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 500;
     color:red;  
-    animation: blink 2s;
+    animation: blink 3s;
     margin-top: 5px;
     margin-bottom: 10px;
-   
+    margin-left: 235px;
+
+    animation: blink 0.3s, ease-in, infinite;
+    animation-iteration-count: 3;
+    
+
 }
 @keyframes blink{
-    0%, 100% { opacity: 1}
-    50% {opacity:0;}
-    100% {opacity:1;}
-}
-.blink{
-    display: block;
-    animation: blink 1s ease-in-out;
+    0%, 100% { opacity: 0}
+    50% {opacity:1;}
+    100% {opacity:0;}
 }
