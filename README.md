@@ -50,15 +50,11 @@ Jag lyckades heller inte behålla punkterna på min o-ordnade lista, de försvan
 
 Jag läste i mina anteckningar att vi ska ange constants med STORA BOKSTÄVER, stämmer det?
 
-
 Jag lägger till lite mer text för att stagea nya förändringar, som jag kan committa och få en ny version att pusha till github. 
-
-
-
 Du kan sätta texten i en span och targetta så att bara din span får klassen completed
 
 
-##### Uppgift A2 ToDo med CSS
+##### Uppgift A2 ToDo med CSS BETYGSKRITERIER inklistrade här för enkel åtkomst
 Inlämningsuppgift 1 fil(er)
 Uppgiften är att via GitHub lämna in en version av ToDo-listan som påbörjades i förra kursen, men med utseende och animationer enligt den bifogade videofilen.
 Kravspecifikation
@@ -79,8 +75,6 @@ Lämna in genom att pusha till ett publikt repository på GitHub. Publicera ocks
 Länk till GitHub-repot
 Länk till GitHub Pages
 
-
-
 ###### KOMMENTARER Uppgift A2 ToDo med CSS
 *Saker jag noterat: Har ej varit consistent med '' och "". När anv man vad?
 *strong istället för h1 och h2 var dåligt, men det funkade.
@@ -88,5 +82,14 @@ Länk till GitHub Pages
 *jag rörde ihop contentbox och container en del.
 *behöver öva mer på semantiken och hur jag lägger upp allt snyggt.
 *Jag stylade 2 saker utanför CSS, men nu vill jag ha feedback så jag skickar in detta! Kul och utmanande. 
+
+# komplettering efter dagens lektion
+Nu har jag städat koden och gjort den mer konsistent.Jag installerade en extension som gör det lättare att formatera. 
+(prettier) Så nice. shift+alt+F.
+Jag fick svar på många av gårdagens funderingar under dagens lektion.
+MEN jag är osäker på indragen. Jag skulle vilja ha fler, men vet inte vart exakt jag ska göra dem.
+En annan fråga nu: Ska jag använda mig av hashtags # när jag skriver kommentarer i read-me:n? OCH Kan man ha 2 st readme??
+
+
 
 

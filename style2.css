@@ -1,160 +1,145 @@
-
 /*importing a font*/
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Qwitcher+Grypen:wght@400;700&family=Shadows+Into+Light&display=swap");
-.styleOne{display:none;}a{visibility:hidden}
-
+.styleOne {
+  display: none;
+}
+a {
+  visibility: hidden;
+}
 
 /*Styling HTML and the whole background*/
-html{
-    cursor: url(black-cursor.png),auto;
-    font-size: 100%;
-    height: 100vh; /*height in vh means 100% of viewport height. This height will always fit any screen*/
-    background-image:linear-gradient(360deg, salmon, pink );
-
+html {
+  font-size: 100%;
+  height: 100vh; /*height in vh means 100% of viewport height. This height will always fit any screen*/
+  background-image: linear-gradient(360deg, salmon, pink);
 }
 
 /*Styling inputfield*/
-.task-input{
-    /*I center everything and work with flex*/
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 10px; /*space between elements*/
+.task-input {
+  display: flex; /*I center everything and work with flex*/
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /*space between elements*/
 }
 
 /*Styling inside the input-field where the text goes*/
-#textInput{
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    border-color: rgb(175, 175, 175);
-    border-width: 2px;
-    font-size: x-large;
-    width: 280px; /*width of the field*/
-    height: 35px; /*height of the field*/
-
-/*I put this field in focus and change its properties*/   
-}
-#textInput:focus{
-    outline-width: 0.5px; 
-    outline-color:rgb(8, 125, 203);
-    border-radius: 3px;    
+#textInput {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border-color: rgb(175, 175, 175);
+  border-width: 2px;
+  font-size: x-large;
+  width: 280px; /*width of the field*/
+  height: 35px; /*height of the field*/
 }
 
-/*HEY FREESTYLE*/
-.task-container #textInput{
-/*tried to make a text cursor in gimp and also tried a picture. did not work. have to keep going with other stuff*/
-   
+/*I put this field in focus and change its properties*/
+#textInput:focus {
+  outline-width: 0.5px;
+  outline-color: rgb(8, 125, 203);
+  border-radius: 3px;
 }
 
 /*When adding a task to the list I wanted animations to make it look good.. or snarare like Richards*/
-.everySpecificTask{
-    opacity: 0; /*invisible-cloak in the beginning to make animation bring forth the task*/
-    animation: fadeInUp 0.2s ease-out forwards;
-    display:flex;
-    justify-content: center; 
-    font-family: 'Open Sans', sans-serif;
-    font-weight:600;
-    padding-bottom: 5px; /*Space below the task*/
+.every-specific-task {
+  opacity: 0; /*invisible-cloak in the beginning to make animation bring forth the task*/
+  animation: fadeInUp 0.2s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding-bottom: 5px; /*Space below the task*/
 }
-@keyframes fadeInUp{
-    0%{
-        opacity: 0; /*Invisible in the start*/
-        transform: translateY(30px); /*moves down 30px*/
-    }
-    100%{
-        opacity: 1; /*Visible! hey baberiba*/
-        transform:translateY(0);/*Back to origin*/
-    }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /*Invisible in the start*/
+    transform: translateY(30px); /*moves down 30px*/
+  }
+  100% {
+    opacity: 1; /*Visible! hey baberiba*/
+    transform: translateY(0); /*Back to origin*/
+  }
 }
 
 /*Styling for my container so that everything stays centered and so that I can
 style all elements easily*/
-.container{
-    display: flex;
-    justify-content: center;
-    margin:0 auto; /*Centering the container horisontally*/
-    padding: 20px; /*inner marginals*/
-    width: 600px;
-    max-width: 100%; /*Max width has to be 100% of its parent*/
-    opacity:0; /*Invisible and soon about to move up the stairs 100px to bounce down*/
-    transform: translateY(-100px);
-    animation: bounceDown 0.8s ease-out forwards; 
-    /*animation for the whole thing to start fast and slow down at the end when it reaches its "place".
-    forwards makes it stay where the animation stopped*/
-    
-}
-
-/*Some freestyling again, this is a responsive design for small screens*/
-@media(max-width:600px){
-    .container{
-        width: 90%; /*Making the container 90% of width*/
-        padding: 10px; /*Smaller inner margins*/
-    }
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; /*Centering the container horisontally*/
+  padding: 20px; /*inner marginals*/
+  width: 600px;
+  max-width: 100%; /*Max width has to be 100% of its parent*/
+  opacity: 0; /*Invisible and soon about to move up the stairs 100px to bounce down*/
+  transform: translateY(-100px);
+  animation: bounceDown 0.8s ease-out forwards;  /*animation for the whole thing to start fast and slow down at the end when it reaches its final "place".
+  forwards makes it stay where the animation stopped*/
 }
 
 /*ANIMATION FOR THE CONTAINER*/
-@keyframes bounceDown{
-0%  {opacity:0;
+@keyframes bounceDown {
+  0% {
+    opacity: 0;
     transform: translateY(-800px); /*Moves up*/
-}
-70%{opacity: 1;
+  }
+  70% {
+    opacity: 1;
     transform: translateY(50px); /*Goes down*/
-}
-100%{
+  }
+  100% {
     opacity: 1;
     transform: translateY(-10px); /*Moves up a little bit*/
+  }
 }
 
-}
-
-/*I want to style my Strong tag. I know I could have used other semantics like h1 or h2
-but my boat floats and I am still learning*/
-strong{
-    font-size: 4rem; /*Very Big font size, stands for root em: a measure unit that
-    changes the font-size of a root element. Not best practice here I aknowledge that */
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    width: 100%;
-    text-align: center;
+strong {
+  font-size: 4rem; /*Very Big font size, stands for root em: a measure unit that changes the font-size of a root element. 
+  Not best practice here I aknowledge that */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 /*Styling for the add button*/
-#addBtn{
-    font-size: x-large;
-    width: 50px;
-    height: 40px;
-    outline-style:auto; /*Automatically still on the line*/
-    border-radius: 4px;
-    outline-color: rgb(155, 155, 155);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:500;
+.add-btn {
+  font-size: x-large;
+  width: 50px;
+  height: 40px;
+  outline-style: auto; /*Automatically still on the line*/
+  border-radius: 4px;
+  outline-color: rgb(155, 155, 155);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 /*Styling for all completed tasks*/
-.completedTasks{
-    font-size: medium;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-bottom: 20px; /*Margin below the task*/
-    margin-top: 20px; /*Margin above the task*/
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    height:100%;  
+.completed-tasks {
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px; /*Margin below the task*/
+  margin-top: 20px; /*Margin above the task*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 /*Styling the contentbox that holds all the content*/
-.contentBox{
-    max-width: 100%;
-    min-width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 70px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*box-shadow property:
+.content-box {
+  max-width: 100%;
+  min-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  /*box-shadow property:
     shadow is centered below the element.
     shadow will be seen 4 px down from the element.
     10px: We want the shadow soft. The higher the px:value-The blurrier the shadow.
@@ -166,60 +151,63 @@ strong{
 }
 
 /*Styling the delete button*/
-.delete-btn{
-    cursor:pointer;
-    text-decoration-color: transparent;
-    background-color: transparent;
-    border: none;
-    font-size: large;  
+.delete-btn {
+  cursor: pointer;
+  text-decoration-color: transparent;
+  background-color: transparent;
+  border: none;
+  font-size: large;
 }
+
 /*Pseudo-class :hover makes a shift in styling when hovering over the button. We make it bigger! */
-.delete-btn:hover{
-    transform:scale(1.05);
+.delete-btn:hover {
+  transform: scale(1.05);
 }
 
 /*Styling completed tasks in list. we want a line through*/
-#theList li.completed span{
-    text-decoration: line-through;
-    color: rgb(99, 96, 107);  
+.the-list li.completed span {
+  text-decoration: line-through;
+  color: rgb(99, 96, 107);
 }
 
 /*Styling for the tasks in the list*/
-#theList li span{
-    cursor:pointer;
-    padding-right: 10px;
-    font-size: x-large;
-    text-decoration: none;
-    color:black;
-    
-    transition: color 0.5s ease, text-decoration 0.5s ease; 
-    /*this dims down the task nice and easy. Going from black, to linethrough grey*/
+.the-list li span {
+  cursor: pointer;
+  padding-right: 10px;
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+
+  transition: color 0.5s ease, text-decoration 0.5s ease; /*this dims down the task nice and easy. Going from black, to linethrough grey*/
 }
 
 /*styling the alert-message*/
-#alert{
-    display: none; /*Stays hidden in the beginning*/
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:medium;
-    font-style: italic;
-    font-weight: 500;
-    color:red;  
-    animation: blink 3s; /*animated blinks*/
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 235px;
+#alert {
+  display: none; /*Stays hidden in the beginning*/
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: italic;
+  font-weight: 500;
+  color: red;
+  animation: blink 3s; /*animated blinks*/
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 235px;
 
-    animation: blink 0.3s, ease-in-out;
-    animation-iteration-count: 2;
-    /*0.3s is the time for the animation from start to stop
+  animation: blink 0.3s, ease-in-out;
+  animation-iteration-count: 2;
+  /*0.3s is the time for the animation from start to stop
     ease-in is a timing-function that starts slow and speeds up at the end
     the blink animation happens 2 times*/
-    
-
 }
 /*Animation defined*/
 /*blink is the name of the animation*/
-@keyframes blink{
-    0%, 100% { opacity: 0} /*In the beginning and end of animation it is invisible*/
-    50% {opacity:1;} /*in the middle it is visible*/
-}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0; /*In the beginning and end of animation it is invisible*/
+  } 
+  50% {
+    opacity: 1; /*in the middle it is visible*/
+  }
+  } 

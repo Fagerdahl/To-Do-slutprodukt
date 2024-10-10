@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style2.css'>
     <!--img src="https://www.pixelstalk.net/wp-content/uploads/2016/11/Focus-photography-widescreen-wallpapers-1920x1080.jpg"alt="ronjasPhoto" class="styleOne"-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Qwitcher+Grypen:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
@@ -13,12 +13,12 @@
 </head>
 
 <body class="container"><!--I put body in a class for later styling-->
-    <div class="contentBox">
+    <div class="content-box">
         <a onclick="document.querySelector('link').href= 'style.css'">vers.1</a>    
         <a onclick="document.querySelector('link').href= 'style2.css'">Vers. 2 INLÄMNING 1, A2</a>
 
     <strong>My ToDo</strong>
-    <div class="completedTasks">
+    <div class="completed-tasks">
         <!--These counters are placed inside a class and put in a span, so that they are styleable-->
             <span id="completedCount">0</span>&nbsp;completed <!--I am using a non breaking space in HTML, since I don`t know how to make space in CSS-->
     </div>
@@ -27,13 +27,13 @@
 
         <div class="task-input">
         <input type="text" id="textInput" placeholder=" ">
-        <button id="addBtn">OK</button>
+        <button class="add-btn">OK</button>
     </div>
 
     <p id="alert" class="blink">Input must not be empty</p>
     </div>
 
-    <div class="theList">
+    <div class="the-list">
             <ul id="theList"></ul>
         </div>
     </div>
